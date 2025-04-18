@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Indian Recipes</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <button class="theme-toggle" id="themeToggle">
+            <i class="fas fa-moon"></i>
+        </button>
+        <h1>🍛 Spices Book</h1>
+    </header>
+
+    <div class="container">
+        <div class="search-bar">
+            <input type="text" class="search-input" placeholder="Search recipes..." id="searchInput">
+            <i class="fas fa-search search-icon"></i>
+        </div>
+
+        <div class="filter-buttons" id="filterButtons">
+            <button class="filter-btn active" data-category="all">All</button>
+            <button class="filter-btn" data-category="vegetarian">Veg</button>
+            <button class="filter-btn" data-category="non-vegetarian">Non-Veg</button>
+            <button class="filter-btn" data-category="dessert">Desserts</button>
+        </div>
+
+        <div class="recipe-list" id="recipeList"></div>
+
+        <div class="recipe-view" id="recipeView">
+            <button class="back-button" onclick="showRecipeList()"><i class="fas fa-arrow-left"></i> All Recipes</button>
+            <img class="recipe-image" id="recipeImage" alt="Recipe Image">
+            <h2 id="recipeTitle"></h2>
+            <div class="recipe-meta">
+                <p><i class="fas fa-users"></i> <span id="servings"></span></p>
+                <p><i class="fas fa-clock"></i> <span id="cookTime"></span></p>
+            </div>
+            <div class="recipe-content">
+                <div class="ingredients-card">
+                    <h3><i class="fas fa-carrot"></i> Ingredients</h3>
+                    <ul class="ingredients-list" id="ingredients"></ul>
+                </div>
+                <div class="instructions-card">
+                    <h3><i class="fas fa-list-ol"></i> Instructions</h3>
+                    <ol class="instructions-list" id="instructions"></ol>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
